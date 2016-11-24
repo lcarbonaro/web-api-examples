@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>    
+    <title>Web API Examples</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <!-- Link for optional custom CSS goes here -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- main html content starts here -->
+    <div class="container">
+        
+        <div class="page-header">
+            <h1>Web API Example</h1>
+        </div>
+        
+        <div class="well well-lg form-group form-group-lg form-inline">
+            <input type="text" id="txtSearch" class="form-control" placeholder="some parameter ..." />
+            <button class="btn btn-lg btn-primary">Call API</button>
+        </div>
+        
+        <div id="divResults"></div>
+        
+    </div>
+    <!-- main html content ends here   -->
+
+
+    <!-- template here -->
+    <script id="tmpResults" type="text/template">
+        {{#albums.items}}
+        <img src="{{images.1.url}}" />
+        {{/albums.items}}
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Mustache template library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+
+    <!-- script tag for custom JS goes here -->
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+
+</html>
